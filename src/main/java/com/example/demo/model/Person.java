@@ -4,9 +4,12 @@ import java.util.UUID;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import org.springframework.lang.NonNull;
+
 public class Person {
 
     private final UUID id;
+    @NonNull
     private final String name;
 
     public Person(@JsonProperty("id") UUID id, @JsonProperty("name") String name) {
@@ -18,7 +21,7 @@ public class Person {
         return id;
     }
 
-    public String getNamString() {
+    public String getName() {
         return name;
     }
 
